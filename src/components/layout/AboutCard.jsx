@@ -6,11 +6,9 @@ import VerticalLineRight from "../../assets/images/verticalLineRight.png";
 const AboutCard = ({ image, title }) => {
   return (
     <div className="flex flex-col items-center space-y-2">
-      {/* Card Wrapper */}
       <div className="flex items-center">
-        {/* Left Gradient Bar */}
         <div
-          className="h-[205px] w-[7px]"
+          className="h-52 w-1"
           style={{
             backgroundImage: `url(${VerticalLineLeft})`,
           }}
@@ -18,13 +16,9 @@ const AboutCard = ({ image, title }) => {
 
         {/* Card with Border Image */}
         <div
-          className="relative flex flex-col items-center justify-center p-6 space-y-4"
+          className="relative flex flex-col items-center justify-center p-6 space-y-4 bg-center bg-cover w-[300px] h-[300px]"
           style={{
             backgroundImage: `url(${BorderImg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "300px",
-            height: "300px",
           }}
         >
           <img src={image} alt={title} className="relative z-10 w-20 h-20" />
@@ -35,7 +29,7 @@ const AboutCard = ({ image, title }) => {
 
         {/* Right Gradient Bar */}
         <div
-          className="h-[205px] w-[7px]"
+          className="h-52 w-1"
           style={{
             marginRight: "-2px",
             backgroundImage: `url(${VerticalLineRight})`,

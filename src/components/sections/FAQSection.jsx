@@ -1,32 +1,9 @@
 import React, { useState } from "react";
 import FAQsImg from "../../assets/images/spider.png"; // Adjust the path as per your project structure
 import FAQsBgImg from "../../assets/images/faqBg.png";
-import FAQItem from "../general/FAQItem";
+import { faqItems } from "../data-display/data";
 
 const categories = ["General", "Pre-ICO", "Token", "Client", "Legal"];
-
-const faqItems = [
-  {
-    question: "How do I create NFTs on 3dotlink?",
-    answer:
-      "Artists and creators can use our AI-integrated platform to generate NFTs by providing specific inputs, such as the desired features and elements for their digital artwork.",
-  },
-  {
-    question: "What kind of art does 3dotlink support?",
-    answer:
-      "Our platform uses blockchain technology to verify and authenticate all digital artworks, ensuring their uniqueness and ownership.",
-  },
-  {
-    question: "How are digital artworks verified for authenticity?",
-    answer:
-      "Yes, artists have full control over their collections through our dedicated dashboard and management tools.",
-  },
-  {
-    question: "Can artists access and manage their collections on 3dotlink?",
-    answer:
-      "Yes, artists have full control over their collections through our dedicated dashboard and management tools.",
-  },
-];
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -34,8 +11,9 @@ const FAQSection = () => {
   const toggleAnswer = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <section className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -47,11 +25,11 @@ const FAQSection = () => {
 
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="flex flex-col lg:flex-row items-center">
-          <div className="lg:w-1/2 lg:pr-8">
-            <h1 className="text-4xl font-bold mb-2 font-['Zen_Dots']">
-              Have any question?
+          <div className="lg:w-1/2 lg:pr-8 w-full mb-8 lg:mb-0">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 font-['Zen_Dots']">
+              Have any questions?
             </h1>
-            <p className="text-gray-400 mb-8">
+            <p className="text-gray-400 mb-8 text-sm md:text-base">
               Curious about 3dotlink? Explore our frequently asked questions to
               find answers.
             </p>
@@ -61,14 +39,13 @@ const FAQSection = () => {
               {categories.map((category, index) => (
                 <button
                   key={index}
-                  className="px-4 py-2 text-sm font-['Zen_Dots'] text-white font-normal leading-[24px]"
+                  className="px-4 py-2 text-sm font-['Zen_Dots'] text-white font-normal leading-[24px] hover:text-red-600 transition-colors"
                 >
                   {category}
                 </button>
               ))}
-              <div className="relative mt-2 w-[610px] border border-gray-500 mx-auto">
-                {/* Red bar at the start */}
-                <div className="absolute mt-[-3px] left-0 w-[97px] h-[6px] bg-red-600 opacity-100" />
+              <div className="relative mt-2 w-[150px] md:w-[610px] border border-gray-500 hidden md:block mx-auto">
+                <div className="absolute mt-[-3px] left-0 w-[97px] h-[6px] bg-red-600 opacity-100 hidden md:block" />
               </div>
             </div>
 
@@ -82,7 +59,9 @@ const FAQSection = () => {
                 >
                   {/* Question */}
                   <div className="p-4 hover:bg-opacity-30 transition-colors">
-                    <h3 className=" font-zen-dots ">{item.question}</h3>
+                    <h3 className="font-zen-dots text-sm md:text-base">
+                      {item.question}
+                    </h3>
                   </div>
                   {/* Answer */}
                   {activeIndex === index && (
@@ -96,7 +75,7 @@ const FAQSection = () => {
           </div>
 
           {/* Right Column - Image */}
-          <div className="lg:w-1/2 mt-8 lg:mt-0">
+          <div className="lg:w-1/2 mt-8 lg:mt-0 w-full">
             <img
               src={FAQsImg}
               alt="Character illustration"
@@ -105,7 +84,7 @@ const FAQSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

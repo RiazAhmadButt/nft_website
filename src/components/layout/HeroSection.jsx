@@ -5,7 +5,7 @@ import Rectangle from "../general/Rectangle";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-[120vh]">
+    <div className="relative w-full h-[100vh] md:h-[100vh] lg:h-[120vh]">
       <video
         autoPlay
         loop

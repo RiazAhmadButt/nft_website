@@ -15,6 +15,20 @@ import NFT7 from "../../assets/images/nft7.png";
 
 import RoadmapImg1 from "../../assets/images/D2.png";
 
+// Navlinks 
+export const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#artist", label: "Artist" },
+  { href: "#roadmap", label: "Staking" },
+  { href: "#team", label: "Roadmap" },
+  { href: "#marketplace", label: "Team" },
+  { href: "#staking", label: "Vesting" },
+  { href: "#vesting", label: "Marketplace" },
+];
+
+
+
 export const cardData = [
   {
     image: MoneyIcon,
@@ -74,7 +88,6 @@ export const roadMapAllPhases = [
       "Early AI Generative System Testing",
       "Preparing for NFT Mask Collection Launch",
       "Website launch V1",
-      "Whitelisting",
     ],
     image: RoadmapImg1,
   },
@@ -86,7 +99,6 @@ export const roadMapAllPhases = [
       "3dotlink NFT Collection Launch",
       "Active Marketing Campaigns",
       "Community Engagement Initiatives",
-      "3dotlink Marketplace Launch",
     ],
     image: RoadmapImg1,
   },
@@ -100,5 +112,33 @@ export const roadMapAllPhases = [
       "Staking",
     ],
     image: RoadmapImg1,
+  },
+];
+
+
+
+
+
+
+export const faqItems = [
+  {
+    question: "How do I create NFTs on 3dotlink?",
+    answer:
+      "Artists and creators can use our AI-integrated platform to generate NFTs by providing specific inputs, such as the desired features and elements for their digital artwork.",
+  },
+  {
+    question: "What kind of art does 3dotlink support?",
+    answer:
+      "Our platform uses blockchain technology to verify and authenticate all digital artworks, ensuring their uniqueness and ownership.",
+  },
+  {
+    question: "How are digital artworks verified for authenticity?",
+    answer:
+      "Yes, artists have full control over their collections through our dedicated dashboard and management tools.",
+  },
+  {
+    question: "Can artists access and manage their collections on 3dotlink?",
+    answer:
+      "Yes, artists have full control over their collections through our dedicated dashboard and management tools.",
   },
 ];
